@@ -104,6 +104,11 @@ bio.display = function() {
             $("#skills").append(skill_data);
         });
     }
+
+    $.each(bio.contacts, function(key, value) {
+        var contact_data = HTMLcontactGeneric.replace("%contact%", key).replace("%data%", value);
+        $("#footerContacts").append(contact_data);
+    });
 };
 
 work.display = function() {
@@ -168,13 +173,6 @@ education.display = function() {
     });
 };
 
-function displayFooter() {
-    $.each(bio.contacts, function(key, value) {
-        var contact_data = HTMLcontactGeneric.replace("%contact%", key).replace("%data%", value);
-        $("#footerContacts").append(contact_data);
-    });
-}
-
 function locationizer(work_obj) {
     var warray = [];
     work_obj.jobs.forEach(function(work) {
@@ -199,6 +197,5 @@ bio.display();
 work.display();
 projects.display();
 education.display();
-displayFooter();
 
 $("#mapDiv").append(googleMap);
