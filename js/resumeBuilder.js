@@ -14,52 +14,44 @@ var bio = {
 };
 
 var work = {
-    "jobs": [
-        {
-            "employer": "10i9",
-            "title" : "Web Development",
-            "location": "Bragança Paulista, SP",
-            "dates": "12-03-2015",
-            "description": "Create sites and blogs"
-        },
-        {
-            "employer": "Unigex",
-            "title" : "ERP Support",
-            "location": "Fortaleza, CE",
-            "dates": "10-03-2010",
-            "description": "Give support for the ERP system"
-        }
-    ]
+    "jobs": [{
+        "employer": "10i9",
+        "title": "Web Development",
+        "location": "Bragança Paulista, SP",
+        "dates": "12-03-2015",
+        "description": "Create sites and blogs"
+    }, {
+        "employer": "Unigex",
+        "title": "ERP Support",
+        "location": "Fortaleza, CE",
+        "dates": "10-03-2010",
+        "description": "Give support for the ERP system"
+    }]
 };
 
 var projects = {
-    "projects": [
-        {
-            "title" : "Projeto 1",
-            "dates": "05-05-2013",
-            "description": "Descrição do projeto 1",
-            "images": ["images/197x148.gif", "images/197x148.gif"]
-        },
-        {
-            "title" : "Projeto 2",
-            "dates": "15-11-2014",
-            "description": "Descrição do projeto 2",
-            "images": ["images/197x148.gif", "images/197x148.gif"]
-        }
-    ]
+    "projects": [{
+        "title": "Projeto 1",
+        "dates": "05-05-2013",
+        "description": "Descrição do projeto 1",
+        "images": ["images/197x148.gif", "images/197x148.gif"]
+    }, {
+        "title": "Projeto 2",
+        "dates": "15-11-2014",
+        "description": "Descrição do projeto 2",
+        "images": ["images/197x148.gif", "images/197x148.gif"]
+    }]
 };
 
 var education = {
-    "schools": [
-    {
+    "schools": [{
         "name": "Universidade São Francisco",
         "location": "Itatiba, SP",
         "degree": "Bachelor degree",
         "dates": "12-01-2018",
         "url": "http://usf.com.br",
         "majors": ["CS"]
-    },
-    {
+    }, {
         "name": "Loveland High School",
         "location": "Loveland, CO",
         "degree": "High School degree",
@@ -67,14 +59,12 @@ var education = {
         "url": "http://thompson.k12.co.us/loveland",
         "majors": ["CS"]
     }],
-    "onlineCourses": [
-    {
+    "onlineCourses": [{
         "name": "Web Developer Nanodegree",
         "school": "Udacity",
         "dates": "10-20-2016",
         "url": "https://br.udacity.com/"
-    },
-    {
+    }, {
         "name": "Server-side Development with NodeJS",
         "school": "The Hong Kong University of Science and Technology",
         "dates": "08-30-2016",
@@ -184,7 +174,7 @@ function locationizer(work_obj) {
 
 function inName(name) {
     var names = name.split(" ");
-    var first = names[0].slice(0,1).toUpperCase() + names[0].slice(1).toLowerCase();
+    var first = names[0].slice(0, 1).toUpperCase() + names[0].slice(1).toLowerCase();
     var last = names[1].toUpperCase();
 
     return first + " " + last;
